@@ -1,0 +1,55 @@
+aula.js
+
+function ola(){
+    alert("Ola");
+}
+
+// nao ha retorno -> o chamador nao precisa fazer nada
+function percorrer(xs){
+    for(let i = 0; i < xs.length; i++){
+        console.log(xs[i]);
+    }
+}
+
+//ha retorno -> o chamador precisa fazer algo
+function somar(xs){
+    let total = 0;
+    for(let i = 0; i < xs.length; i++){
+        total = total + xs[i]
+    }
+    return total;
+
+}
+//ex. 1
+function pares(xs){
+    let total = 0;
+    for (let i = 0; i < xs.length; i++){
+        if(xs[i] % 2 === 0){
+            total = total + xs[i];
+        }
+    }
+    return total;
+}
+
+//ex.2
+function menores(xs){
+    let menor = xs[0];
+    for(let i = 0; i < xs.length; i++){
+        if(xs[i] <= menor){
+            menor = xs[i];
+        }
+    }
+    return menor;
+}
+______________________________________________
+
+aula.html
+
+    <body>
+        <script>
+           // percorrer([true, 2, -1, 1.5, "ola"]);
+          // console.log(somar([17.80,20.20,3.00, 9.00]))
+          console.log(pares([1,2,3,4,5,6,7,8,9,10]))
+          console.log(menores([17.80,20.20,3.00, 9.00]))
+        </script>
+    </body>
